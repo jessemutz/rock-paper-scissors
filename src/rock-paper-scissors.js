@@ -4,9 +4,16 @@
 // @param computerSelection()
 
 let choices = ["ROCK", "PAPER", "SCISSORS"];
+let playerScore = 0;
+let computerScore = 0;
+
+const player = document.querySelector("#player-score .score");
+const computer = document.querySelector("#computer-score .score");
+player.textContent = `${playerScore}`;
+computer.textContent = `${computerScore}`;
+
 function getRandomChoice() {
   let randomNumber = Math.floor(Math.random() * choices.length);
-
   return choices[randomNumber];
 }
 
@@ -38,7 +45,11 @@ function playGame() {
   }
 }
 
-let rpsButton = document.getElementById("rps");
+function isGameOver() {
+  return playerScore === 5 || computerScore === 5
+}
+
+let rpsButton = document.querySelectorAll("choice");
 
 rpsButton.addEventListener('click', () => {
   playGame();
