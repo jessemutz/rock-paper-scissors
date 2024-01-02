@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>JS Practice</title>
+</head>
+
+<body onLoad="">
+  <div class="main">
+    <h1 class="title">Play Rock Paper Scissors</h1>
+    <div class="scoreboard d-grid">
+      <div class="player-score">
+        <p class="score font-mono">00</p>
+        <p>Your Score</p>
+      </div>
+      <div class="computer-score">
+        <p class="score font-mono">00</p>
+        <p>Computer Score</p>
+      </div>
+    </div>
+    <div class="arena d-grid">
+      <div class="choices choices--player d-grid">
+        <button class="rock choice"><span class="icon">🤜</span></button>
+        <button class="paper choice"><span class="icon">🫳</span></button>
+        <button class="scissors choice"><span class="icon">✌️</span></button>
+      </div>
+      <div class="spacer"></div>
+      <div class="choices choices--computer d-grid">
+        <button class="choice rock"><span class="icon">🤜</span></button>
+        <button class="choice paper"><span class="icon">🫳</span></button>
+        <button class="choice scissors"><span class="icon">✌️</span></button>
+      </div>
+    </div>
+    <div class="ring ring-back"></div>
+    <div class="ring ring-front"></div>
+  </div>
+</body>
+<script src="rock-paper-scissors/rock-paper-scissors.js"></script>
+
+</html>
